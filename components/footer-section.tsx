@@ -64,12 +64,10 @@ export function FooterSection() {
           {/* Bottom Row */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-700 text-sm">
-              © 2025 Dreelio. Created by <span className="font-semibold">Leon Chike</span>
+              © 2025 Dreelio. 
             </p>
 
-            <p className="text-gray-700 text-sm">
-              Built in <span className="font-semibold">Framer</span>
-            </p>
+          
           </div>
         </div>
       </div>
