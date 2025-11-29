@@ -15,7 +15,7 @@ export function FeaturesGridSection() {
   });
 
   // Row 1: Move left to right (0% to 15%)
-  const row1X = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
+  const row1X = useTransform(scrollYProgress, [0, 1], ["-15%", "0%"]);
 
   // Row 2: Move right to left (0% to -15%)
   const row2X = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
@@ -27,6 +27,9 @@ export function FeaturesGridSection() {
     { name: "DaVinci", color: "bg-pink-400", emoji: "🎬" },
     { name: "Linear", color: "bg-blue-600", emoji: "📝" },
     { name: "Figma", color: "bg-yellow-500", emoji: "🎨" },
+    { name: "Trello", color: "bg-blue-300", emoji: "📋" },
+    { name: "Asana", color: "bg-pink-600", emoji: "✅" },
+    { name: "Calendar", color: "bg-red-400", emoji: "📅" },
   ];
 
   const integrationsRow2 = [
@@ -35,6 +38,8 @@ export function FeaturesGridSection() {
     { name: "Zapier", color: "bg-purple-600", emoji: "⚡" },
     { name: "GitHub", color: "bg-gray-800", emoji: "🐙" },
     { name: "Stripe", color: "bg-blue-500", emoji: "💳" },
+    { name: "Google Drive", color: "bg-green-500", emoji: "📁" },
+    { name: "Dropbox", color: "bg-blue-700", emoji: "☁️" },
   ];
 
   const brandColors = [
@@ -46,6 +51,8 @@ export function FeaturesGridSection() {
     "#3B82F6",
     "#6366F1",
     "#EC4899",
+    "#10B981",
+    "#EF4444",  
   ];
 
   const containerVariants = {

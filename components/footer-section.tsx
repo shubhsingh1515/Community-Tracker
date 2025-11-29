@@ -24,13 +24,13 @@ export function FooterSection() {
   };
 
   return (
-    <footer className="w-full bg-white border-t-2 border-gray-100">
+    <footer className="w-full bg-blue-50 border-t-2 border-gray-100">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="max-w-7xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-start gap-12 py-16 md:py-20"
+        className="max-w-5xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-start gap-12 py-16 md:py-20"
       >
         <motion.div variants={itemVariants} className="flex flex-col gap-6">
           <div>
@@ -116,7 +116,7 @@ export function FooterSection() {
             </div>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="flex flex-col gap-4">
+          <motion.div variants={itemVariants} className="flex flex-col gap-4 ">
             <h3 className="text-foreground font-semibold">Resources</h3>
             <div className="flex flex-col gap-2">
               <a
@@ -146,7 +146,7 @@ export function FooterSection() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="max-w-7xl mx-auto px-4 md:px-6 py-6 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left"
+        className="max-w-5xl mx-auto px-4 md:px-6 py-6 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left"
       >
         <p className="text-muted-foreground text-sm">
           © 2025 Pointer. All rights reserved.

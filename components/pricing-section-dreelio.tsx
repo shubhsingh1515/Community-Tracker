@@ -161,7 +161,7 @@ export function PricingSectionDreelio() {
               whileHover={{ y: -8 }}
             >
               {plan.popular && (
-                <div className="absolute -top-4 right-8 bg-black text-white px-4 py-1.5 rounded-full text-sm font-semibold">
+                <div className="absolute top-2 right-4 bg-black text-white px-4 py-1.5 rounded-full text-sm font-semibold">
                   POPULAR
                 </div>
               )}
@@ -200,8 +200,8 @@ export function PricingSectionDreelio() {
                 <Button
                   className={`w-full py-6 rounded-full font-semibold text-base transition-all ${
                     plan.popular
-                      ? "bg-[#0f4c3a] hover:bg-[#0d3f2f] text-white shadow-lg"
-                      : "bg-[#0f4c3a] hover:bg-[#0d3f2f] text-white"
+                      ? "bg-blue-600 hover:bg-white hover:border-blue-600 hover:text-blue-600 border-2 text-white shadow-lg"
+                      : "bg-black hover:bg-white hover:border-black text-white hover:text-black border-2"
                   }`}
                 >
                   Get started →
