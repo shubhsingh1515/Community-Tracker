@@ -129,7 +129,7 @@ export function ProjectManagementSection() {
               </button>
             </div>
 
-            <div className="space-y-2 max-h-80 overflow-y-auto">
+            <div className="space-y-2 overflow-y-auto">
               <div className="pb-3 border-b border-gray-200">
                 <div className="text-sm font-semibold text-gray-700 flex items-center gap-2">
                   <span>▼</span> Ongoing{" "}
@@ -141,7 +141,7 @@ export function ProjectManagementSection() {
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
-                className="space-y-2"
+                className="space-y-4"
               >
                 {projects.map((project, index) => (
                   <motion.div
