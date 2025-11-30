@@ -34,30 +34,44 @@ export function Header() {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-[9999] flex justify-center w-full pointer-events-none">
-      <motion.header
-        initial={false}
-        animate={{
-          width: scrolled ? "min(1000px, calc(100% - 0.75rem))" : "100%",
-          backgroundColor: scrolled
-            ? "rgba(255, 255, 255, 0.9)"
-            : "rgba(255, 255, 255, 0)",
-          paddingTop: scrolled ? "0.45rem" : "0.8rem",
-          paddingBottom: scrolled ? "0.45rem" : "0.8rem",
-          borderRadius: scrolled ? "9999px" : "0px",
-          marginTop: scrolled ? "0.4rem" : "0rem",
-          backdropFilter: scrolled ? "blur(18px)" : "blur(0px)",
-          boxShadow: scrolled
-            ? "0 4px 20px rgba(0, 0, 0, 0.08)"
-            : "0 0 0 rgba(0, 0, 0, 0)",
-        }}
-        transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
-        style={{
-          border: scrolled
-            ? "1px solid rgba(230, 230, 230, 0.8)"
-            : "1px solid transparent",
-        }}
-        className="flex items-center justify-between px-3 sm:px-5 pointer-events-auto min-h-[58px]"
-      >
+<motion.header
+  initial={false}
+  animate={{
+    width: scrolled ? "min(1000px, calc(100% - 0.75rem))" : "100%",
+    backgroundColor: scrolled
+      ? "rgba(255, 255, 255, 0.45)"   // stronger tint
+      : "rgba(255, 255, 255, 0)",
+
+    paddingTop: scrolled ? "0.45rem" : "0.8rem",
+    paddingBottom: scrolled ? "0.45rem" : "0.8rem",
+    borderRadius: scrolled ? "9999px" : "0px",
+    marginTop: scrolled ? "0.4rem" : "0rem",
+
+    // ✔ main blur
+    backdropFilter: scrolled ? "blur(50px)" : "blur(0px)",
+    boxShadow: scrolled
+      ? "0 8px 30px rgba(0, 0, 0, 0.12)"
+      : "0 0 0 rgba(0, 0, 0, 0)",
+  }}
+  transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+
+  style={{
+    // ✔ Safari blur support
+    WebkitBackdropFilter: scrolled ? "blur(20px)" : "blur(0px)",
+    border: scrolled
+      ? "1px solid rgba(134, 134, 134, 0.45)"
+      : "1px solid transparent",
+
+    // ✔ Smooth blur animation
+    transition:
+      "backdrop-filter .35s ease, -webkit-backdrop-filter .35s ease, background-color .35s ease",
+  }}
+
+  // ✔ Additional baseline blur from Tailwind
+  className="backdrop-blur-xl flex items-center justify-between px-3 sm:px-5 pointer-events-auto min-h-[58px]"
+>
+
+
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 min-w-0">
           <div className="w-5 h-5 sm:w-6 sm:h-6 bg-foreground rounded-sm flex-shrink-0" />
