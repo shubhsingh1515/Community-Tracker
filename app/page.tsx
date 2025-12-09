@@ -15,6 +15,8 @@ import { Header } from "@/components/header";
 import HorizontalScrollSection from "@/components/horizontal-scroll-section";
 import { FAQSection } from "@/components/faq-section";
 
+
+
 export default function LandingPage() {
   return (
     <>
