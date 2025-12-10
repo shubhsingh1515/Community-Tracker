@@ -157,7 +157,7 @@ export function AnimatedHero() {
       </div>
 
       {/* IMAGE SECTION */}
-      <div className="mt-20 max-w-5xl mx-auto relative h-96 md:h-[650px]">
+      <div className="mt-20 max-w-3xl mx-auto relative h-80 md:h-[400px]">
         <div
           ref={imageWrapperRef}
           className="absolute inset-0 bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200 mb-[-5rem]"
