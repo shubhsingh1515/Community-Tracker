@@ -6,13 +6,13 @@ import LenisProvider from '@/components/LenisProvider'
 
 const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-inter', // optional but recommended
+  variable: '--font-inter',
 })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
+  title: 'CommunityTracker.ai - Empowering Communities with AI',
   description: 'Created with v0',
-  generator: 'v0.app',
+  generator: 'Next.js',
   icons: {
     icon: '/icon.svg',
   },

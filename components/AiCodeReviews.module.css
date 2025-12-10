@@ -8,7 +8,7 @@
 
 .messageBox {
   position: absolute;
-  border-radius: 8px; /* Adjusted for consistency with shadcn/ui radius */
+  border-radius: 8px; /* Consistent with shadcn/ui radius */
   overflow: hidden;
   padding: 9.49px;
   box-sizing: border-box;
@@ -17,24 +17,32 @@
 .messageBoxBackground {
   width: 316.28px;
   height: 120px;
-  backdrop-filter: blur(16px); /* Updated blur value */
+  backdrop-filter: blur(16px);
   opacity: 0.6;
   border: 0.79px solid hsl(var(--border));
-  background: linear-gradient(180deg, hsl(var(--card)) 0%, transparent 100%);
+  background: linear-gradient(
+    180deg,
+    hsl(var(--card)) 0%,
+    transparent 100%
+  );
   left: 50%;
   top: 50%;
-  transform: translate(calc(-50% + 11.86px), calc(-50% - 7.3px)); /* Maintain relative offset for centering */
+  transform: translate(calc(-50% + 11.86px), calc(-50% - 7.3px));
 }
 
 .messageBoxMain {
   width: 340px;
-  height: 221.40px;
-  backdrop-filter: blur(16px); /* Updated blur value */
+  height: 221.4px;
+  backdrop-filter: blur(16px);
   border: 1px solid hsl(var(--border));
-  background: linear-gradient(180deg, hsl(var(--card) / 0.9) 0%, hsl(var(--card) / 0.7) 100%);
+  background: linear-gradient(
+    180deg,
+    hsl(var(--card) / 0.9) 0%,
+    hsl(var(--card) / 0.7) 100%
+  );
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); /* Center the main box */
+  transform: translate(-50%, -50%);
 }
 
 .content {
@@ -50,7 +58,7 @@
   white-space: pre-wrap;
   word-break: break-words;
   font-size: 10.28px;
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-inter), monospace;
   line-height: 15.81px;
   color: hsl(var(--foreground));
   width: 100%;
@@ -64,7 +72,7 @@
 .highlight {
   position: absolute;
   left: -8.64px;
-  width: 339.20px;
+  width: 339.2px;
 }
 
 .highlightHeader {
@@ -86,7 +94,7 @@
   gap: 3.95px;
   padding: 3.16px 6.33px;
   border-radius: 5.53px;
-  box-shadow: 0px 0.7906976938247681px 2.3720932006835938px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0.79px 2.37px rgba(0, 0, 0, 0.1);
   background: hsl(var(--primary));
   color: hsl(var(--primary-foreground));
   font-size: 10.28px;
@@ -99,14 +107,14 @@
 }
 
 .buttonText {
-  font-family: "Geist", sans-serif;
+  font-family: var(--font-inter), sans-serif;
 }
 
 .buttonShortcut {
-  font-family: "SF Pro", sans-serif;
+  font-family: var(--font-inter), sans-serif;
 }
 
-/* Theme specific styles for code block text color */
+/* Theme-specific styles */
 .aiCodeReviews[data-theme="dark"] .messageBoxBackground .codeBlock p {
   color: hsl(var(--muted-foreground));
 }
@@ -115,7 +123,7 @@
   color: hsl(var(--foreground));
 }
 
-/* Specific stroke color for the SVG path */
+/* SVG stroke color */
 .aiCodeReviews[data-theme="dark"] .codeBlock svg path {
   stroke: #22c55e;
 }
