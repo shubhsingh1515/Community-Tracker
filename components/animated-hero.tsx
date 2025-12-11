@@ -157,13 +157,13 @@ export function AnimatedHero() {
       </div>
 
       {/* IMAGE SECTION */}
-      <div className="mt-20 max-w-3xl mx-auto relative h-80 md:h-[400px]">
+      <div className="mt-20 max-w-3xl mx-auto relative h-80 md:h-[350px]">
         <div
           ref={imageWrapperRef}
           className="absolute inset-0 bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200 mb-[-5rem]"
         >
           <img
-            src="/hero.png" // ← replace path"
+            src="/tyty.png" // ← replace path"
             alt="Dashboard"
             className="w-full h-full "
           />
